@@ -1,11 +1,13 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class IsMouseOver : MonoBehaviour
 {
- 
-    //public Image
+    public Text des;
+    public TextMeshProUGUI spriteDes;
+    public float check = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,9 +19,17 @@ public class IsMouseOver : MonoBehaviour
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-        if (mousePos == (Vector2)transform.position) //Remember transform is set to Vector3 so use Vector2 to change it
-        {
+        float distance = Vector2.Distance(transform.position, mousePos);
 
+        if (distance < 1) //Remember transform is set to Vector3 so use Vector2 to change it
+        {
+            spriteDes.text = "A pirate";
+            check = 1;
+        }
+        else
+        {
+            check = 0;
+            spriteDes.text = " ";
         }
     }
 }
