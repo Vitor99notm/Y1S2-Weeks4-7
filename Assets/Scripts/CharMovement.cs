@@ -14,7 +14,8 @@ public class CharMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isKeyPressed = Keyboard.current.anyKey.isPressed;
+        //Check if key was pressed
+        //isKeyPressed = Keyboard.current.anyKey.isPressed;
 
         //Up key makes character go up
         if(Keyboard.current.upArrowKey.isPressed)
