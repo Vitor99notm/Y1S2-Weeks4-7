@@ -3,6 +3,7 @@ using UnityEngine;
 public class CollisionDetection : MonoBehaviour
 {
     public Transform charPos;
+    public AudioSource impactSound;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +25,7 @@ public class CollisionDetection : MonoBehaviour
         if(distance < 1)
         {
             charPos.position = startPos;
+            impactSound.Play();
         }
     }
 }
