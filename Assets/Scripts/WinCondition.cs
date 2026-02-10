@@ -6,6 +6,7 @@ public class WinCondition : MonoBehaviour
     //public Text winCondition;
     public Transform charPos;
     public GameObject textSprite;
+    public GameObject button;
     public AudioSource winSound;
     public float winCount = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,6 +25,7 @@ public class WinCondition : MonoBehaviour
         {
            //Good code to remember to easily activate objects that are off.
            textSprite.SetActive(true);
+           button.SetActive(true);
 
             if (winCount == 0)
             {
