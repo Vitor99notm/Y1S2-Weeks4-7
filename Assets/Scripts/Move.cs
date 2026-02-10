@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    float speed = 0.01f;
+    float speed = 0.03f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -22,7 +22,7 @@ public class CollisionDetection : MonoBehaviour
         startPos.y = -4.35f;
 
         //If character hit, take back to start
-        if(distance < 1)
+        if(distance < 0.8)
         {
             charPos.position = startPos;
             impactSound.Play();
