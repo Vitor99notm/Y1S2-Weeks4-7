@@ -5,7 +5,7 @@ public class ToggleSet : MonoBehaviour
     public void ToggleShape()
     {
 
-        //Easy version
+        //Code allows to show hidden game objects through buttons
         gameObject.SetActive(!gameObject.activeInHierarchy);
 
         
