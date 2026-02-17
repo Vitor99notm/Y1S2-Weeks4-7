@@ -21,10 +21,13 @@ public class SpikeHazards : MonoBehaviour
     {
         currentTime += Time.deltaTime;
 
+        //Timer to countdown when the spikes turn off/on
         if(currentTime > maxTime)
         {
             currentTime = 0;
             //spikes.gameObject.SetActive(!gameObject.activeInHierarchy);
+
+            //After each instance that the timer reaches 3 seconds the spikes object turns off/on
             if(spikes.gameObject.activeInHierarchy == false)
             {
                 spikes.gameObject.SetActive(true);
