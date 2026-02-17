@@ -24,7 +24,15 @@ public class SpikeHazards : MonoBehaviour
         if(currentTime > maxTime)
         {
             currentTime = 0;
-            spikes.gameObject.SetActive(!gameObject.activeInHierarchy);
+            //spikes.gameObject.SetActive(!gameObject.activeInHierarchy);
+            if(spikes.gameObject.activeInHierarchy == false)
+            {
+                spikes.gameObject.SetActive(true);
+            }
+            else if(spikes.gameObject.activeInHierarchy == true)
+            {
+                spikes.gameObject.SetActive(false);
+            }
         }
 
         if (spikes.bounds.Contains(transform.position) == true && spikes.gameObject.activeInHierarchy)
